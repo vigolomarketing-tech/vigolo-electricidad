@@ -7,34 +7,100 @@
   <title>Vigolo Electricidad | Electricista Profesional</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <style>
     * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
     body {background-color: #f5f7fa; color: #222; line-height: 1.6;}
-    header {background: linear-gradient(135deg, #00264d, #004080); color: #fff; text-align: center; padding: 2rem 1rem;}
-    header h1 {font-size: 2.2rem; margin-bottom: .5rem; color: #ffcc00;}
-    header p {font-size: 1.1rem;}
+    
+    /* ===== HEADER ===== */
+    header {
+      background: linear-gradient(rgba(0, 26, 51, 0.85), rgba(0, 26, 51, 0.85)), 
+                  url('imagenes/fondo-electrico.jpg') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    header h1 {font-size: 2.5rem; color: #ffcc00; margin-bottom: .5rem;}
+    header p {font-size: 1.2rem; margin-bottom: .5rem;}
+    header .subtext {font-size: 1rem; color: #ddd;}
 
-    nav {background: #001a33; display: flex; justify-content: center; flex-wrap: wrap; padding: .8rem;}
-    nav a {color: #fff; margin: 0.8rem 1rem; text-decoration: none; font-weight: 600;}
+    /* ===== NAVBAR ===== */
+    nav {
+      background: #00264d;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: .8rem;
+    }
+    nav a {
+      color: #fff;
+      margin: 0.8rem 1rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
     nav a:hover {color: #ffcc00;}
 
-    section {padding: 3rem 1rem; max-width: 1100px; margin: auto;}
-    .services, .about, .contact {background: #fff; border-radius: 10px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);}
-    h2 {color: #003366; margin-bottom: 1rem; text-align: center;}
-    p {margin-bottom: 1rem;}
+    /* ===== SECCIONES ===== */
+    section {
+      padding: 3rem 1rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .services, .about, .contact {
+      background: #fff;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #003366;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
 
-    .services-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;}
-    .service-card {text-align: center; background: #fafafa; border-radius: 10px; padding: 1.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: transform 0.3s;}
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      text-align: center;
+      background: #fafafa;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
     .service-card:hover {transform: translateY(-5px);}
     .service-card h3 {color: #003366; margin-bottom: .5rem;}
 
+    /* ===== BOTÓN ===== */
     .cta {text-align: center; margin-top: 2rem;}
-    .cta a {background: #ffcc00; color: #003366; padding: 0.8rem 1.5rem; border-radius: 5px; font-weight: 600; text-decoration: none;}
+    .cta a {
+      background: #ffcc00;
+      color: #003366;
+      padding: 0.9rem 1.7rem;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      transition: 0.3s;
+    }
     .cta a:hover {background: #ffd633;}
 
-    footer {background: #00264d; color: #fff; text-align: center; padding: 1.5rem;}
+    /* ===== FOOTER ===== */
+    footer {
+      background: #00264d;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+    }
     footer p {font-size: 0.9rem;}
 
+    /* ===== WHATSAPP FLOAT ===== */
     .whatsapp-float {
       position: fixed;
       width: 60px;
@@ -53,16 +119,18 @@
     .whatsapp-float:hover {background-color: #20ba5a;}
 
     @media (max-width: 768px) {
-      header h1 {font-size: 1.7rem;}
+      header h1 {font-size: 1.8rem;}
       nav a {margin: 0.5rem;}
     }
   </style>
 </head>
+
 <body>
 
   <header>
     <h1>Vigolo Electricidad</h1>
     <p>Electricista profesional con más de 20 años de experiencia</p>
+    <p class="subtext">Instalaciones, mantenimiento y urgencias eléctricas</p>
   </header>
 
   <nav>
@@ -74,8 +142,8 @@
 
   <section id="inicio" class="intro">
     <h2>Soluciones eléctricas seguras y profesionales</h2>
-    <p>En Vigolo Electricidad brindamos un servicio completo para hogares, comercios e industrias. Nos especializamos en instalaciones, mantenimiento y reparaciones con los más altos estándares de seguridad.</p>
-    <p><strong>Estamos ubicados en Burzaco</strong> y trabajamos en <strong>Zona Sur y Capital Federal</strong>.</p>
+    <p>En Vigolo Electricidad ofrecemos atención personalizada, materiales de primera calidad y cumplimiento con todas las normas de seguridad. Nuestro compromiso es brindarte tranquilidad y eficiencia en cada proyecto.</p>
+    <p><strong>Ubicados en Burzaco</strong> — trabajamos en <strong>Zona Sur y Capital Federal</strong>.</p>
     <div class="cta">
       <a href="https://vigolomarketing-tech.github.io/vigolo-cotizaciones/">Solicitar presupuesto</a>
     </div>
@@ -86,46 +154,51 @@
     <div class="services-grid">
       <div class="service-card">
         <h3>Instalaciones eléctricas</h3>
-        <p>Realizamos instalaciones eléctricas completas en viviendas, oficinas, locales comerciales e industrias, cumpliendo las normas AEA vigentes.</p>
+        <p>Realizamos instalaciones completas en viviendas, oficinas y locales comerciales. Desde el diseño del circuito hasta la conexión final, cumpliendo las normas AEA.</p>
       </div>
       <div class="service-card">
         <h3>Tableros eléctricos</h3>
-        <p>Armado, reparación y modernización de tableros eléctricos domiciliarios y comerciales con protección diferencial y térmica.</p>
+        <p>Armado, reparación y modernización de tableros con protecciones térmicas y diferenciales, garantizando seguridad y estabilidad eléctrica.</p>
       </div>
       <div class="service-card">
         <h3>Luminarias LED</h3>
-        <p>Instalación de luminarias LED de bajo consumo, cableado, sensores de movimiento y sistemas de iluminación inteligente.</p>
+        <p>Instalación de luminarias LED, sensores de movimiento y sistemas inteligentes de iluminación para interiores y exteriores.</p>
       </div>
       <div class="service-card">
-        <h3>Mantenimiento y reparaciones</h3>
-        <p>Diagnóstico y reparación de fallas eléctricas, mantenimiento preventivo y correctivo para instalaciones seguras y duraderas.</p>
+        <h3>Cableado estructurado</h3>
+        <p>Reinstalación o renovación de cableado interno, canalización en PVC o metálica, y conexionado profesional de líneas de energía y datos.</p>
       </div>
       <div class="service-card">
         <h3>CCTV y seguridad</h3>
-        <p>Instalación de cámaras de seguridad, cableado y conexión de DVRs para hogares y empresas.</p>
+        <p>Instalación de cámaras de seguridad, cableado y puesta en marcha de sistemas DVR con control remoto por celular.</p>
       </div>
       <div class="service-card">
-        <h3>Puesta a tierra y medición</h3>
-        <p>Instalación y verificación de sistemas de puesta a tierra y protección diferencial según reglamentación vigente.</p>
+        <h3>Puesta a tierra</h3>
+        <p>Instalación de jabalinas y medición de puesta a tierra con instrumentos certificados, cumpliendo las normas de seguridad eléctrica.</p>
+      </div>
+      <div class="service-card">
+        <h3>Mantenimiento y urgencias</h3>
+        <p>Atención rápida ante fallas eléctricas, cortocircuitos o emergencias las 24hs, con respuesta en Zona Sur y CABA.</p>
       </div>
     </div>
   </section>
 
   <section id="nosotros" class="about">
     <h2>Sobre nosotros</h2>
-    <p>Detrás de Vigolo Electricidad está <strong>Lucas Vigolo</strong>, electricista matriculado con más de 20 años de trayectoria brindando soluciones seguras, prolijas y confiables. Nos destacamos por el compromiso, la responsabilidad y la atención personalizada en cada trabajo.</p>
+    <p>Detrás de Vigolo Electricidad está <strong>Lucas Vigolo</strong>, electricista matriculado con más de 20 años de experiencia. 
+    Su compromiso, responsabilidad y profesionalismo garantizan un trabajo prolijo, seguro y duradero para cada cliente.</p>
   </section>
 
   <section id="contacto" class="contact">
     <h2>Contacto</h2>
-    <p>¿Necesitás un electricista de confianza? Comunicate con nosotros y te asesoramos sin compromiso.</p>
+    <p>¿Necesitás un electricista de confianza? Comunicate con nosotros:</p>
     <p>📞 <strong>Teléfono / WhatsApp:</strong> <a href="https://wa.me/541123825297" target="_blank">+54 11 2382 5297</a></p>
     <p>📧 <strong>Email:</strong> <a href="mailto:vigoloelectricidad@gmail.com">vigoloelectricidad@gmail.com</a></p>
     <p>📍 <strong>Ubicación:</strong> Burzaco, Zona Sur y Capital Federal</p>
   </section>
 
   <footer>
-    <p>© 2025 Vigolo Electricidad - Todos los derechos reservados</p>
+    <p>© 2025 Vigolo Electricidad — Todos los derechos reservados</p>
   </footer>
 
   <a href="https://wa.me/541123825297" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
