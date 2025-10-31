@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VIGOLO Electricidad | Electricista profesional</title>
+  <meta name="description" content="VIGOLO Electricidad - Instalaciones, tableros, luminarias, mantenimiento y urgencias 24hs. Lucas Vigolo, electricista matriculado en Burzaco." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --azul-oscuro:#051827;
+      --azul:#0b2447;
+      --dorado:#c59a2f;
+      --blanco:#ffffff;
+      --gris-fondo:#f4f7fb;
+      --card-bg:#ffffff;
+      --muted:#6b7280;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}
+    body{background:var(--gris-fondo);color:#111;line-height:1.5}
+    a{color:inherit}
+
+    /* Header */
+    header{background:linear-gradient(180deg,var(--azul-oscuro),var(--azul));color:var(--blanco);padding:34px 12px;text-align:center}
+    .brand{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:18px;flex-direction:column}
+    .brand h1{font-size:2.1rem;letter-spacing:.6px}
+    .lead{font-size:1.05rem;opacity:.95;margin-top:6px}
+    .location{font-size:.95rem;opacity:.9;margin-top:6px}
+
+    nav{display:flex;justify-content:center;gap:18px;padding:12px 16px;background:transparent;flex-wrap:wrap}
+    nav a{color:rgba(255,255,255,0.95);text-decoration:none;padding:6px 10px;border-radius:6px;font-weight:600}
+    nav a:hover{background:rgba(255,255,255,0.06);color:var(--dorado)}
+
+    /* Container */
+    .wrap{max-width:1100px;margin:28px auto;padding:0 16px}
+
+    /* Section styles */
+    section.card{background:var(--card-bg);border-radius:12px;padding:22px;margin-bottom:20px;box-shadow:0 8px 24px rgba(5,20,40,0.06)}
+    h2{color:var(--azul);margin-bottom:10px}
+    h3{color:var(--azul-oscuro);margin-bottom:8px}
+    p.lead-2{color:var(--muted);margin-bottom:12px}
+
+    /* Services grid */
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+    .service{padding:14px;border-radius:10px;background:#fff;box-shadow:0 6px 18px rgba(5,20,40,0.04);transition:transform .18s}
+    .service:hover{transform:translateY(-6px)}
+    .service h4{color:var(--dorado);margin-bottom:8px}
+    .service p{color:#444;font-size:.95rem}
+
+    /* Projects / portfolio list */
+    .projects-list{display:grid;gap:14px}
+    .project-item{display:flex;gap:14px;align-items:flex-start}
+    .project-item .meta{flex:1}
+    .project-item .meta h4{margin-bottom:6px}
+    .badge{display:inline-block;background:var(--azul);color:var(--blanco);padding:4px 8px;border-radius:6px;font-weight:700;font-size:.85rem;margin-bottom:8px}
+
+    /* Pricing quick guide */
+    .pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .price-card{background:#fafafa;padding:12px;border-radius:8px;border:1px solid #eee}
+    .price-card h4{color:var(--azul)}
+    .small{font-size:.9rem;color:var(--muted)}
+
+    /* Contact area */
+    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .contact-box{background:#fff;padding:16px;border-radius:10px;box-shadow:0 8px 20px rgba(5,20,40,0.05)}
+    .contact-box a{display:inline-block;background:var(--dorado);color:var(--azul);padding:10px 14px;border-radius:8px;font-weight:700;text-decoration:none}
+    .contact-box a.wh{background:#25D366;color:#fff;border-radius:8px;padding:10px 14px;display:inline-block}
+
+    /* FAQ */
+    .faq dt{font-weight:700;color:var(--azul-oscuro);margin-top:12px}
+    .faq dd{margin:6px 0 12px 0;color:var(--muted)}
+
+    footer{background:var(--azul-oscuro);color:var(--blanco);padding:18px;text-align:center;margin-top:20px;border-top:4px solid rgba(197,154,47,0.12)}
+    footer a{color:var(--dorado);text-decoration:none}
+
+    /* Responsive */
+    @media(max-width:880px){
+      .contact-grid{grid-template-columns:1fr}
+      .brand h1{font-size:1.6rem}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <h1>VIGOLO Electricidad</h1>
+      <p class="lead">Electricista profesional</p>
+      <p class="location">Burzaco · Zona Sur y Capital Federal</p>
+
+      <nav style="margin-top:12px;">
+        <a href="#servicios">Servicios</a>
+        <a href="https://vigolomarketing-tech.github.io/vigolo-cotizaciones/" target="_blank">Solicitar presupuesto</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- Servicios -->
+    <section id="servicios" class="card" aria-labelledby="servicios-title">
+      <h2 id="servicios-title">Servicios eléctricos</h2>
+      <p class="lead-2">Ofrecemos soluciones profesionales, seguras y probadas tanto para hogares como para comercios e industrias. Trabajamos con normas AEA y materiales certificados.</p>
+
+      <div class="services-grid">
+        <div class="service">
+          <h4>Instalaciones eléctricas completas</h4>
+          <p>Proyectos llave en mano: diseño, selección de materiales, instalación y puesta en marcha para viviendas, locales y naves industriales.</p>
+          <ul>
+            <li>Planos y memoria técnica</li>
+            <li>Canalizaciones embutidas o a la vista</li>
+            <li>Certificación de instalación</li>
+          </ul>
+        </div>
+
+        <div class="service">
+          <h4>Tableros, disyuntores y protecciones</h4>
+          <p>Armado y modernización de tableros monofásicos y trifásicos, mediciones y puesta en marcha de protecciones diferenciales y térmicas.</p>
+          <ul>
+            <li>Relevamiento y cálculo de cargas</li>
+            <li>Instalación de termomagnéticas y diferenciales</li>
+            <li>Etiquetado y documentación</li>
+          </ul>
+        </div>
+
+        <div class="service">
+          <h4>Luminarias y diseño de iluminación</h4>
+          <p>Instalación de luminarias LED, control de intensidad, proyectos de iluminación funcional y decorativa para interiores y exteriores.</p>
+          <ul>
+            <li>Estudio lumínico básico</li>
+            <li>Instalación y conexionado de artefactos</li>
+            <li>Iluminación eficiente (ahorro energético)</li>
+          </ul>
+        </div>
+
+        <div class="service">
+          <h4>Reparaciones y mantenimiento</h4>
+          <p>Diagnóstico de fallas, reparación de cortocircuitos, mantenimiento preventivo y correctivo con reporte y recomendaciones.</p>
+          <ul>
+            <li>Inspecciones eléctricas</li>
+            <li>Mantenimiento programado</li>
+            <li>Garantía de trabajo</li>
+          </ul>
+        </div>
+
+        <div class="service">
+          <h4>CCTV y sistemas de seguridad</h4>
+          <p>Instalación de cámaras, cableado estructurado y conexión a grabadores/BCR para monitoreo local o remoto.</p>
+          <ul>
+            <li>Diseño de cobertura</li>
+            <li>Conexión y puesta en marcha</li>
+            <li>Capacitación básica al cliente</li>
+          </ul>
+        </div>
+
+        <div class="service">
+          <h4>Puesta a tierra y corrección de potencia</h4>
+          <p>Jabalinas, cajas de inspección, tableros de corrección de potencia y proyectos de mejora energética.</p>
+          <ul>
+            <li>Puesta a tierra certificada</li>
+            <li>Tableros de corrección de potencia</li>
+            <li>Mediciones y reportes</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="card" aria-labelledby="proyectos-title">
+      <h2 id="proyectos-title">Proyectos recientes (ejemplos)</h2>
+      <div class="projects-list">
+        <div class="project-item">
+          <div class="meta">
+            <span class="badge">Instalación</span>
+            <h4>Tablero domiciliario + protecciones</h4>
+            <p class="small">Armado de tablero para vivienda, colocación de térmicas y diferencial, pruebas y certificación. Tiempo estimado: 1 día.</p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="meta">
+            <span class="badge">Comercial</span>
+            <h4>Iluminación LED en local comercial</h4>
+            <p class="small">Reemplazo y diseño lumínico para mejorar visibilidad y reducir consumo. Incluye balance de cargas y etiquetado.</p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="meta">
+            <span class="badge">Industrial</span>
+            <h4>Re-cableado y canalización en taller</h4>
+            <p class="small">Canalización metálica, cableado estructurado y puesta a tierra. Trabajo por fases para minimizar paradas.</p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="meta">
+            <span class="badge">Seguridad</span>
+            <h4>Instalación de CCTV para edificio</h4>
+            <p class="small">Cobertura de entrada, pasillos y perimetro con grabación y acceso remoto configurado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Precios orientativos / guía rápida -->
+    <section class="card" aria-labelledby="precios-title">
+      <h2 id="precios-title">Precios orientativos (referencia)</h2>
+      <p class="small">Estos valores son orientativos y dependen del proyecto — para un presupuesto exacto solicitá la visita o enviá detalles por WhatsApp.</p>
+      <div class="pricing" aria-hidden="true">
+        <div class="price-card">
+          <h4>Tablero domiciliario</h4>
+          <p class="small">Desde $38.200 (fijación superficial) — empotrado y armado según bocas y protecciones.</p>
+        </div>
+        <div class="price-card">
+          <h4>Instalación luminarias</h4>
+          <p class="small">Apliques: desde $24.000 | Artefacto LED: desde $44.600 (según tipo y complejidad).</p>
+        </div>
+        <div class="price-card">
+          <h4>Re-cableado</h4>
+          <p class="small">De 1 a 50 bocas: referencia $34.300 — varía según materiales y accesibilidad.</p>
+        </div>
+      </div>
+      <p class="small" style="margin-top:10px">(Precios de referencia tomados de listados zonales; la cotización final incluye análisis de materiales y tiempos).</p>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="card" aria-labelledby="contacto-title">
+      <h2 id="contacto-title">Contacto</h2>
+      <div class="contact-grid" style="gap:16px">
+        <div class="contact-box">
+          <h3>Solicitá presupuesto</h3>
+          <p class="small">Podés enviarnos los detalles por WhatsApp o por email. Si el trabajo es complejo, coordinamos una visita técnica gratis (zona Burzaco y alrededores).</p>
+          <p style="margin-top:10px"><strong>WhatsApp:</strong> <a class="wh" href="https://wa.me/541123825297" target="_blank">+54 11 2382 5297</a></p>
+          <p><strong>Email:</strong> <a href="mailto:vigoloelectricidad@gmail.com">vigoloelectricidad@gmail.com</a></p>
+        </div>
+        <div class="contact-box">
+          <h3>Horario y cobertura</h3>
+          <p class="small"><strong>Horario:</strong> Lunes a Viernes 8:00 - 18:00. Urgencias 24hs según disponibilidad.</p>
+          <p class="small"><strong>Zonas:</strong> Burzaco, Zona Sur y Capital Federal.</p>
+          <a href="https://vigolomarketing-tech.github.io/vigolo-cotizaciones/" target="_blank" class="btn" style="display:inline-block;margin-top:8px">Ir a cotizaciones</a>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div style="margin-top:18px" class="faq">
+        <h3>Preguntas frecuentes</h3>
+        <dl>
+          <dt>¿Trabajan con facturación y garantía?</dt>
+          <dd>Sí. Damos factura y entregamos garantía por escrito según el tipo de trabajo.</dd>
+
+          <dt>¿Hacen instalaciones en locales comerciales y empresas?</dt>
+          <dd>Sí. Tenemos experiencia en proyectos comerciales e industriales.</dd>
+
+          <dt>¿Realizan urgencias fuera del horario?</dt>
+          <dd>Disponemos de atención de urgencia 24hs — consultar costo según distancia y horario.</dd>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 VIGOLO Electricidad — Lucas Vigolo · Electricista matriculado</p>
+    <p><a href="mailto:vigoloelectricidad@gmail.com">vigoloelectricidad@gmail.com</a> · <a href="https://wa.me/541123825297" target="_blank">WhatsApp</a></p>
+  </footer>
+
+</body>
+</html>
