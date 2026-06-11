@@ -1,207 +1,1263 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Vigolo Electricidad - Electricista profesional con más de 20 años de experiencia. Instalaciones, mantenimiento, tableros, CCTV y urgencias eléctricas en Zona Sur y Capital Federal.">
-  <title>Vigolo Electricidad | Electricista Profesional</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Electricista en Zona Sur: Burzaco, Longchamps, Adrogué y alrededores. Tableros eléctricos, reparación de fallas, instalaciones y urgencias. Vigolo Electricidad." />
+  <meta name="keywords" content="electricista Burzaco, electricista Longchamps, electricista Adrogué, electricista Zona Sur, electricista urgente, tableros eléctricos, reparación de fallas eléctricas" />
+  <meta property="og:title" content="Electricista profesional en Zona Sur | Vigolo Electricidad" />
+  <meta property="og:description" content="Lucas Vigolo. Más de 20 años de experiencia en instalaciones, tableros eléctricos, reparación de fallas y urgencias en Zona Sur." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://vigolomarketing-tech.github.io/vigolo-electricidad/" />
+  <title>Electricista Zona Sur | Burzaco, Longchamps y Adrogué | Vigolo Electricidad</title>
 
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
-    body {background-color: #f5f7fa; color: #222; line-height: 1.6;}
-    
-    /* ===== HEADER ===== */
-    header {
-      background: linear-gradient(rgba(0, 26, 51, 0.85), rgba(0, 26, 51, 0.85)), 
-                  url('imagenes/fondo-electrico.jpg') center/cover no-repeat;
-      color: #fff;
-      text-align: center;
-      padding: 4rem 1rem;
+    :root {
+      color-scheme: dark;
+      --bg: #071018;
+      --bg-soft: #0c1823;
+      --panel: rgba(15, 28, 40, 0.9);
+      --panel-solid: #101e2b;
+      --line: rgba(154, 183, 210, 0.18);
+      --text: #f5f8fb;
+      --muted: #b8c6d4;
+      --muted-2: #8796a5;
+      --blue: #1597ff;
+      --blue-strong: #0074d9;
+      --gold: #f5c451;
+      --gold-strong: #dfa722;
+      --green: #25d366;
+      --shadow: 0 22px 70px rgba(0, 0, 0, 0.34);
+      --radius: 18px;
+      --radius-sm: 12px;
+      --container: 1120px;
     }
-    header h1 {font-size: 2.5rem; color: #ffcc00; margin-bottom: .5rem;}
-    header p {font-size: 1.2rem; margin-bottom: .5rem;}
-    header .subtext {font-size: 1rem; color: #ddd;}
 
-    /* ===== NAVBAR ===== */
-    nav {
-      background: #00264d;
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(21, 151, 255, 0.22), transparent 32rem),
+        linear-gradient(180deg, #050b12 0%, var(--bg) 42%, #08131d 100%);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      text-rendering: optimizeLegibility;
+    }
+
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      content: "";
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.72), transparent 80%);
+    }
+
+    a {
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--container));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(5, 12, 19, 0.86);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav-wrap {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: .8rem;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      min-height: 72px;
     }
-    nav a {
-      color: #fff;
-      margin: 0.8rem 1rem;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav a:hover {color: #ffcc00;}
 
-    /* ===== SECCIONES ===== */
-    section {
-      padding: 3rem 1rem;
-      max-width: 1100px;
-      margin: auto;
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      min-width: 0;
     }
-    .services, .about, .contact {
-      background: #fff;
+
+    .brand-mark {
+      display: grid;
+      flex: 0 0 auto;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border: 1px solid rgba(245, 196, 81, 0.4);
       border-radius: 10px;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background: linear-gradient(145deg, rgba(21, 151, 255, 0.2), rgba(245, 196, 81, 0.16));
+      color: var(--gold);
+      box-shadow: 0 12px 26px rgba(21, 151, 255, 0.14);
     }
-    h2 {
-      color: #003366;
-      margin-bottom: 1.5rem;
+
+    .brand-text {
+      display: grid;
+      min-width: 0;
+      line-height: 1.1;
+    }
+
+    .brand-name {
+      overflow: hidden;
+      font-size: 0.98rem;
+      font-weight: 800;
+      letter-spacing: 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .brand-area {
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 24px;
+      color: var(--muted);
+      font-size: 0.93rem;
+      font-weight: 650;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      transition: color 180ms ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--text);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 46px;
+      padding: 0 18px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-size: 0.94rem;
+      font-weight: 800;
+      line-height: 1.1;
       text-align: center;
-      font-size: 1.8rem;
+      text-decoration: none;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      color: #071018;
+      background: linear-gradient(135deg, var(--gold), #ffe199);
+      box-shadow: 0 16px 34px rgba(245, 196, 81, 0.24);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      box-shadow: 0 20px 40px rgba(245, 196, 81, 0.3);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      border-color: rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 16px 28px rgba(0, 0, 0, 0.18);
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible {
+      border-color: rgba(21, 151, 255, 0.46);
+      background: rgba(21, 151, 255, 0.12);
+    }
+
+    .header-cta {
+      min-height: 42px;
+      padding-inline: 14px;
+      font-size: 0.84rem;
+      white-space: nowrap;
+    }
+
+    .header-cta .cta-long {
+      display: none;
+    }
+
+    .icon {
+      width: 19px;
+      height: 19px;
+      flex: 0 0 auto;
+    }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      min-height: 690px;
+      padding: 58px 0 40px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      content: "";
+      background:
+        linear-gradient(90deg, rgba(5, 12, 19, 0.98) 0%, rgba(5, 12, 19, 0.88) 36%, rgba(5, 12, 19, 0.42) 68%, rgba(5, 12, 19, 0.72) 100%),
+        linear-gradient(180deg, rgba(5, 12, 19, 0.1), rgba(5, 12, 19, 0.94)),
+        var(--hero-image, radial-gradient(circle at 76% 32%, rgba(21, 151, 255, 0.42), transparent 28rem)) center right / cover no-repeat;
+    }
+
+    .hero::after {
+      position: absolute;
+      inset: auto 0 0 0;
+      z-index: -1;
+      height: 180px;
+      content: "";
+      background: linear-gradient(180deg, transparent, var(--bg));
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 34px;
+      align-items: end;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      padding: 8px 12px;
+      border: 1px solid rgba(245, 196, 81, 0.32);
+      border-radius: 999px;
+      background: rgba(245, 196, 81, 0.1);
+      color: #ffe19a;
+      font-size: 0.82rem;
+      font-weight: 800;
+    }
+
+    .eyebrow::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 18px rgba(245, 196, 81, 0.8);
+      content: "";
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      margin: 22px 0 18px;
+      font-size: clamp(2.08rem, 8vw, 4.7rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .hero-subtitle {
+      max-width: 720px;
+      margin-bottom: 26px;
+      color: #d6e1ec;
+      font-size: clamp(1rem, 2.5vw, 1.22rem);
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      max-width: 440px;
+    }
+
+    .hero-actions .btn {
+      width: 100%;
+    }
+
+    .hero-proof {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 30px;
+      max-width: 680px;
+    }
+
+    .proof-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(8, 20, 31, 0.68);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
+    }
+
+    .proof-dot {
+      display: grid;
+      flex: 0 0 auto;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(21, 151, 255, 0.16);
+      color: var(--blue);
+      font-weight: 900;
+    }
+
+    .proof-item strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 0.95rem;
+    }
+
+    .proof-item span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .quick-contact {
+      display: grid;
+      gap: 12px;
+      align-self: end;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius);
+      background: rgba(8, 20, 31, 0.72);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .quick-contact small {
+      color: var(--muted);
+      font-weight: 750;
+      text-transform: uppercase;
+    }
+
+    .quick-contact a {
+      overflow-wrap: anywhere;
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .quick-contact span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    section[id] {
+      scroll-margin-top: 86px;
+    }
+
+    .section-head {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 28px;
+      max-width: 760px;
+    }
+
+    .section-kicker {
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .section-head h2 {
+      margin-bottom: 0;
+      font-size: clamp(1.75rem, 5vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 1rem;
     }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      gap: 14px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(19, 36, 52, 0.92), rgba(11, 24, 36, 0.92));
+      box-shadow: 0 16px 42px rgba(0, 0, 0, 0.22);
     }
 
     .service-card {
-      text-align: center;
-      background: #fafafa;
-      border-radius: 10px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
+      padding: 22px;
     }
-    .service-card:hover {transform: translateY(-5px);}
-    .service-card h3 {color: #003366; margin-bottom: .5rem;}
 
-    /* ===== BOTÓN ===== */
-    .cta {text-align: center; margin-top: 2rem;}
-    .cta a {
-      background: #ffcc00;
-      color: #003366;
-      padding: 0.9rem 1.7rem;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
-      transition: 0.3s;
+    .service-card::before {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      content: "";
+      background: linear-gradient(135deg, rgba(21, 151, 255, 0.13), transparent 44%);
+      opacity: 0;
+      transition: opacity 180ms ease;
     }
-    .cta a:hover {background: #ffd633;}
 
-    /* ===== FOOTER ===== */
-    footer {
-      background: #00264d;
+    .service-card:hover::before {
+      opacity: 1;
+    }
+
+    .service-icon {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 18px;
+      place-items: center;
+      border-radius: 12px;
+      background: rgba(21, 151, 255, 0.13);
+      color: var(--blue);
+      font-size: 1.1rem;
+      font-weight: 900;
+    }
+
+    .service-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+      line-height: 1.25;
+    }
+
+    .service-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .split {
+      display: grid;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .feature {
+      display: grid;
+      gap: 8px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    .feature h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 0;
+      font-size: 1.02rem;
+    }
+
+    .feature h3::before {
+      flex: 0 0 auto;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 6px rgba(245, 196, 81, 0.1);
+      content: "";
+    }
+
+    .feature p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .highlight-panel {
+      padding: 24px;
+      border: 1px solid rgba(245, 196, 81, 0.22);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(145deg, rgba(245, 196, 81, 0.13), transparent 44%),
+        linear-gradient(180deg, rgba(20, 35, 49, 0.96), rgba(10, 22, 34, 0.96));
+      box-shadow: var(--shadow);
+    }
+
+    .highlight-panel h2 {
+      margin-bottom: 14px;
+      font-size: clamp(1.55rem, 5vw, 2.4rem);
+      line-height: 1.14;
+      letter-spacing: 0;
+    }
+
+    .highlight-panel p {
+      color: var(--muted);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 22px 0;
+    }
+
+    .stat {
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.045);
+    }
+
+    .stat strong {
+      display: block;
       color: #fff;
-      text-align: center;
-      padding: 1.5rem;
+      font-size: 1.7rem;
+      line-height: 1;
     }
-    footer p {font-size: 0.9rem;}
 
-    /* ===== WHATSAPP FLOAT ===== */
+    .stat span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .area-band {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 80% 20%, rgba(21, 151, 255, 0.16), transparent 26rem),
+        rgba(255, 255, 255, 0.025);
+    }
+
+    .zones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .zones li {
+      padding: 10px 14px;
+      border: 1px solid rgba(21, 151, 255, 0.28);
+      border-radius: 999px;
+      background: rgba(21, 151, 255, 0.09);
+      color: #dceeff;
+      font-size: 0.94rem;
+      font-weight: 750;
+    }
+
+    .faq-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16);
+    }
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 60px;
+      padding: 16px 18px;
+      color: var(--text);
+      cursor: pointer;
+      font-weight: 800;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      flex: 0 0 auto;
+      width: 28px;
+      height: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 50%;
+      color: var(--gold);
+      content: "+";
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    details[open] summary::after {
+      content: "-";
+    }
+
+    details p {
+      margin: 0;
+      padding: 0 18px 18px;
+      color: var(--muted);
+    }
+
+    .final-cta {
+      padding: 28px;
+      border: 1px solid rgba(21, 151, 255, 0.28);
+      border-radius: calc(var(--radius) + 4px);
+      background:
+        linear-gradient(135deg, rgba(21, 151, 255, 0.18), transparent 34%),
+        linear-gradient(180deg, rgba(17, 34, 50, 0.96), rgba(8, 20, 31, 0.96));
+      box-shadow: var(--shadow);
+    }
+
+    .final-cta h2 {
+      margin-bottom: 12px;
+      font-size: clamp(1.75rem, 6vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .final-cta p {
+      max-width: 760px;
+      color: var(--muted);
+    }
+
+    .contact-row {
+      display: grid;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .contact-item {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .contact-item span {
+      display: block;
+      color: var(--muted-2);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .contact-item a,
+    .contact-item strong {
+      display: block;
+      margin-top: 4px;
+      overflow-wrap: anywhere;
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .site-footer {
+      padding: 28px 0 98px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .site-footer strong {
+      color: var(--text);
+    }
+
     .whatsapp-float {
       position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25D366;
-      color: #fff;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-      z-index: 100;
+      right: 18px;
+      bottom: 18px;
+      z-index: 30;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 56px;
+      padding: 0 18px;
+      border-radius: 999px;
+      color: #052211;
+      background: var(--green);
+      box-shadow: 0 16px 34px rgba(37, 211, 102, 0.34), 0 12px 40px rgba(0, 0, 0, 0.32);
+      font-size: 0.95rem;
+      font-weight: 900;
+      text-decoration: none;
     }
-    .whatsapp-float i {margin-top: 15px;}
-    .whatsapp-float:hover {background-color: #20ba5a;}
 
-    @media (max-width: 768px) {
-      header h1 {font-size: 1.8rem;}
-      nav a {margin: 0.5rem;}
+    .whatsapp-float svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(245, 196, 81, 0.9);
+      outline-offset: 3px;
+    }
+
+    @media (min-width: 560px) {
+      .hero-actions {
+        flex-direction: row;
+        max-width: none;
+      }
+
+      .hero-actions .btn {
+        width: auto;
+      }
+
+      .hero-proof {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .stats,
+      .contact-row {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .header-cta .cta-short {
+        display: none;
+      }
+
+      .header-cta .cta-long {
+        display: inline;
+      }
+    }
+
+    @media (min-width: 760px) {
+      .container {
+        width: min(100% - 48px, var(--container));
+      }
+
+      .nav-links {
+        display: flex;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .split {
+        grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+      }
+
+      .faq-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .site-footer {
+        padding-bottom: 36px;
+      }
+    }
+
+    @media (min-width: 980px) {
+      .hero {
+        padding-top: 84px;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 0.98fr) minmax(310px, 0.42fr);
+        min-height: 560px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .quick-contact {
+        align-self: center;
+        margin-bottom: 0;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .hero-proof,
+      .quick-contact {
+        display: none;
+      }
+
+      .whatsapp-float {
+        width: 56px;
+        min-height: 56px;
+        padding: 0;
+        font-size: 0;
+        gap: 0;
+      }
+
+      .whatsapp-float svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .container {
+        width: min(100% - 24px, var(--container));
+      }
+
+      .nav-wrap {
+        min-height: 66px;
+      }
+
+      .brand-mark {
+        width: 34px;
+        height: 34px;
+      }
+
+      .brand-area {
+        display: none;
+      }
+
+      .header-cta {
+        padding-inline: 12px;
+      }
+
+      .hero {
+        min-height: 0;
+        padding: 46px 0 34px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+        line-height: 1.05;
+      }
+
+      .hero-subtitle {
+        font-size: 0.98rem;
+        line-height: 1.58;
+      }
+
+      section {
+        padding: 54px 0;
+      }
+
+      .service-card,
+      .feature,
+      .highlight-panel,
+      .final-cta {
+        border-radius: 14px;
+      }
+
+      .whatsapp-float {
+        right: 12px;
+        bottom: 12px;
+        min-height: 52px;
+        width: 52px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
     }
   </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Electrician",
+      "name": "Vigolo Electricidad",
+      "description": "Electricista profesional en Zona Sur. Instalaciones eléctricas, reparación de fallas, tableros eléctricos, mantenimiento, CCTV y urgencias eléctricas.",
+      "founder": "Lucas Vigolo",
+      "telephone": "+54 11 2382-5297",
+      "email": "vigoloelectricidad@gmail.com",
+      "areaServed": [
+        "Burzaco",
+        "Longchamps",
+        "Adrogué",
+        "Glew",
+        "Claypole",
+        "Temperley",
+        "Lomas de Zamora",
+        "Zona Sur"
+      ],
+      "url": "https://vigolomarketing-tech.github.io/vigolo-electricidad/",
+      "sameAs": [
+        "https://wa.me/541123825297"
+      ]
+    }
+  </script>
 </head>
 
 <body>
+  <header class="site-header" aria-label="Encabezado principal">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M13 2 5 14h6l-1 8 8-12h-6l1-8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Vigolo Electricidad</span>
+          <span class="brand-area">Electricista en Zona Sur</span>
+        </span>
+      </a>
 
-  <header>
-    <h1>Vigolo Electricidad</h1>
-    <p>Electricista profesional con más de 20 años de experiencia</p>
-    <p class="subtext">Instalaciones, mantenimiento y urgencias eléctricas</p>
+      <nav class="nav-links" aria-label="Navegación">
+        <a href="#servicios">Servicios</a>
+        <a href="#trayectoria">Trayectoria</a>
+        <a href="#zonas">Zonas</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="btn btn-primary header-cta" href="https://wa.me/541123825297?text=Hola%20Lucas%2C%20necesito%20un%20presupuesto%20por%20un%20trabajo%20eléctrico" target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20 11.5a8.2 8.2 0 0 1-12.3 7.1L4 19.7l1.2-3.5A8.2 8.2 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+          <path d="M9.3 8.7c.2 3 2.3 5.2 5.3 5.9" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <span class="cta-short">WhatsApp</span>
+        <span class="cta-long">Pedir presupuesto</span>
+      </a>
+    </div>
   </header>
 
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Lucas Vigolo · Más de 20 años de experiencia</span>
+          <h1 id="hero-title">Electricista profesional en Zona Sur</h1>
+          <p class="hero-subtitle">Instalaciones, reparaciones, tableros eléctricos, mantenimiento y urgencias. Más de 20 años de experiencia trabajando con hogares, comercios e instalaciones industriales.</p>
 
-  <section id="inicio" class="intro">
-    <h2>Soluciones eléctricas seguras y profesionales</h2>
-    <p>En Vigolo Electricidad ofrecemos atención personalizada, materiales de primera calidad y cumplimiento con todas las normas de seguridad. Nuestro compromiso es brindarte tranquilidad y eficiencia en cada proyecto.</p>
-    <p><strong>Ubicados en Burzaco</strong> — trabajamos en <strong>Zona Sur y Capital Federal</strong>.</p>
-    <div class="cta">
-      <a href="https://vigolomarketing-tech.github.io/vigolo-cotizaciones/">Solicitar presupuesto</a>
+          <div class="hero-actions" aria-label="Acciones principales">
+            <a class="btn btn-primary" href="https://wa.me/541123825297?text=Hola%20Lucas%2C%20necesito%20un%20presupuesto%20por%20un%20trabajo%20eléctrico" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 11.5a8.2 8.2 0 0 1-12.3 7.1L4 19.7l1.2-3.5A8.2 8.2 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="M9.3 8.7c.2 3 2.3 5.2 5.3 5.9" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              Pedir presupuesto por WhatsApp
+            </a>
+            <a class="btn btn-secondary" href="#servicios">
+              Ver servicios
+            </a>
+          </div>
+
+          <div class="hero-proof" aria-label="Datos destacados">
+            <div class="proof-item">
+              <span class="proof-dot" aria-hidden="true">1</span>
+              <div>
+                <strong>Diagnostico claro</strong>
+                <span>Te explico la falla y el trabajo necesario antes de avanzar.</span>
+              </div>
+            </div>
+            <div class="proof-item">
+              <span class="proof-dot" aria-hidden="true">2</span>
+              <div>
+                <strong>Trabajo prolijo</strong>
+                <span>Instalaciones seguras, ordenadas y pensadas para durar.</span>
+              </div>
+            </div>
+            <div class="proof-item">
+              <span class="proof-dot" aria-hidden="true">3</span>
+              <div>
+                <strong>Atención local</strong>
+                <span>Zona Sur: Burzaco, Longchamps, Adrogué y alrededores.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="quick-contact" aria-label="Contacto rápido">
+          <small>Contacto directo</small>
+          <a href="https://wa.me/541123825297?text=Hola%20Lucas%2C%20necesito%20un%20presupuesto%20por%20un%20trabajo%20eléctrico" target="_blank" rel="noopener">+54 11 2382-5297</a>
+          <span>Mandá fotos o detalles del trabajo y coordinamos una visita o presupuesto.</span>
+        </aside>
+      </div>
+    </section>
+
+    <section id="servicios" aria-labelledby="servicios-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Servicios principales</span>
+          <h2 id="servicios-title">Soluciones eléctricas para casas, comercios e instalaciones industriales</h2>
+          <p>Vigolo Electricidad atiende trabajos chicos, medianos y complejos con una prioridad simple: que la instalación quede segura, ordenada y fácil de mantener.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card service-card">
+            <span class="service-icon" aria-hidden="true">01</span>
+            <h3>Instalaciones eléctricas</h3>
+            <p>Instalaciones nuevas, ampliaciones, cableado, tomas, llaves y circuitos pensados para el consumo real de cada ambiente.</p>
+          </article>
+          <article class="card service-card">
+            <span class="service-icon" aria-hidden="true">02</span>
+            <h3>Tableros eléctricos</h3>
+            <p>Armado, reforma y ordenamiento de tableros eléctricos para mejorar seguridad, distribución y capacidad de protección.</p>
+          </article>
+          <article class="card service-card">
+            <span class="service-icon" aria-hidden="true">03</span>
+            <h3>Térmicas y disyuntores</h3>
+            <p>Colocación y reemplazo de protecciones, revisión de cortes frecuentes y adecuación de circuitos sobrecargados.</p>
+          </article>
+          <article class="card service-card">
+            <span class="service-icon" aria-hidden="true">04</span>
+            <h3>Reparación de fallas eléctricas</h3>
+            <p>Búsqueda de cortocircuitos, pérdidas, falsos contactos, baja tensión, enchufes que calientan y sectores sin energía.</p>
+          </article>
+          <article class="card service-card">
+            <span class="service-icon" aria-hidden="true">05</span>
+            <h3>Iluminacion interior y exterior</h3>
+            <p>Instalación de luminarias, reflectores, sensores, circuitos LED y mejoras de iluminación para seguridad y confort.</p>
+          </article>
+          <article class="card service-card">
+            <span class="service-icon" aria-hidden="true">06</span>
+            <h3>Puesta a tierra</h3>
+            <p>Revisión e instalación de puesta a tierra para reducir riesgos y mejorar la protección de personas y equipos.</p>
+          </article>
+          <article class="card service-card">
+            <span class="service-icon" aria-hidden="true">07</span>
+            <h3>Mantenimiento eléctrico</h3>
+            <p>Control preventivo de instalaciones, ajustes, reemplazos y mejoras para evitar fallas repetidas o paradas inesperadas.</p>
+          </article>
+          <article class="card service-card">
+            <span class="service-icon" aria-hidden="true">08</span>
+            <h3>Cámaras y CCTV</h3>
+            <p>Instalación y cableado para cámaras de seguridad, DVR/NVR, fuentes, conectores y visualización desde el celular.</p>
+          </article>
+          <article class="card service-card">
+            <span class="service-icon" aria-hidden="true">09</span>
+            <h3>Urgencias eléctricas</h3>
+            <p>Atención ante cortes, olor a quemado, chispazos, térmicas que saltan o fallas que no pueden esperar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="elegir-title">
+      <div class="container split">
+        <div class="highlight-panel">
+          <span class="section-kicker">Por qué elegir Vigolo Electricidad</span>
+          <h2 id="elegir-title">Atención directa, criterio técnico y trabajos pensados para no volver al mismo problema</h2>
+          <p>Cuando una instalación eléctrica falla, no alcanza con cambiar una pieza al azar. Lucas revisa el origen del problema, explica opciones y propone una solución razonable para tu casa, local o instalación.</p>
+          <a class="btn btn-primary" href="https://wa.me/541123825297?text=Hola%20Lucas%2C%20necesito%20un%20presupuesto%20por%20un%20trabajo%20eléctrico" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+        </div>
+
+        <div class="feature-list">
+          <article class="feature">
+            <h3>Presupuesto sin vueltas</h3>
+            <p>Primero se entiende el trabajo. Si hace falta, podés enviar fotos por WhatsApp para orientar mejor el diagnóstico.</p>
+          </article>
+          <article class="feature">
+            <h3>Seguridad como prioridad</h3>
+            <p>Tableros, térmicas, disyuntores y puesta a tierra se revisan con foco en proteger personas, artefactos e instalaciones.</p>
+          </article>
+          <article class="feature">
+            <h3>Experiencia en distintos entornos</h3>
+            <p>Más de 20 años trabajando en viviendas, comercios, galpones, oficinas e instalaciones industriales de Zona Sur.</p>
+          </article>
+          <article class="feature">
+            <h3>Trabajo limpio y coordinado</h3>
+            <p>Se cuida el lugar, se ordena el cableado y se coordina la visita para resolver con la menor interrupcion posible.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="trayectoria" aria-labelledby="trayectoria-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Experiencia y trayectoria</span>
+          <h2 id="trayectoria-title">Lucas Vigolo: electricista con más de 20 años de oficio</h2>
+          <p>Vigolo Electricidad nace del trabajo de todos los días: resolver fallas reales, mejorar instalaciones antiguas, armar tableros confiables y dejar cada circuito funcionando como corresponde.</p>
+        </div>
+
+        <div class="stats" aria-label="Indicadores de trayectoria">
+          <div class="stat">
+            <strong>+20</strong>
+            <span>años de experiencia eléctrica</span>
+          </div>
+          <div class="stat">
+            <strong>3</strong>
+            <span>ambitos: hogar, comercio e industria</span>
+          </div>
+          <div class="stat">
+            <strong>Zona Sur</strong>
+            <span>base en Burzaco y atención cercana</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="zonas" class="area-band" aria-labelledby="zonas-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Zonas de atención</span>
+          <h2 id="zonas-title">Electricista en Burzaco, Longchamps, Adrogué y alrededores</h2>
+          <p>Atención en Zona Sur para reparaciones eléctricas, instalaciones, tableros y urgencias. Si tu localidad está cerca, escribí y coordinamos.</p>
+        </div>
+
+        <ul class="zones" aria-label="Localidades atendidas">
+          <li>Burzaco</li>
+          <li>Longchamps</li>
+          <li>Adrogué</li>
+          <li>Glew</li>
+          <li>Claypole</li>
+          <li>Temperley</li>
+          <li>Lomas de Zamora</li>
+          <li>Zona Sur y alrededores</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Preguntas frecuentes</span>
+          <h2 id="faq-title">Antes de pedir un presupuesto</h2>
+          <p>Estas son las consultas más habituales de clientes que buscan un electricista urgente o una mejora segura de su instalación eléctrica.</p>
+        </div>
+
+        <div class="faq-grid">
+          <details>
+            <summary>¿Atendés urgencias eléctricas?</summary>
+            <p>Sí. Ante cortes, térmicas que saltan, olor a quemado o fallas peligrosas, escribí por WhatsApp con tu ubicación y una descripción breve del problema.</p>
+          </details>
+          <details>
+            <summary>¿Trabajás en Burzaco, Longchamps y Adrogué?</summary>
+            <p>Sí. La base de trabajo es Zona Sur, con atención en Burzaco, Longchamps, Adrogué, Glew, Claypole, Temperley, Lomas de Zamora y alrededores.</p>
+          </details>
+          <details>
+            <summary>¿Podés reparar fallas eléctricas difíciles?</summary>
+            <p>Se revisan circuitos, conexiones, protecciones y consumos para encontrar el origen de la falla. La idea es resolver la causa, no tapar el síntoma.</p>
+          </details>
+          <details>
+            <summary>¿Hacés tableros eléctricos completos?</summary>
+            <p>Sí. Se realizan tableros nuevos, reformas, reemplazo de térmicas y disyuntores, ordenamiento de circuitos y mejoras de seguridad.</p>
+          </details>
+          <details>
+            <summary>¿Puedo mandar fotos para pedir presupuesto?</summary>
+            <p>Sí. Las fotos ayudan a entender el trabajo, detectar riesgos visibles y coordinar mejor la visita. El presupuesto final depende del estado real de la instalación.</p>
+          </details>
+          <details>
+            <summary>¿Realizás mantenimiento eléctrico para comercios?</summary>
+            <p>Sí. Se coordinan revisiones, reparaciones y mejoras para locales, oficinas, depósitos e instalaciones con mayor demanda eléctrica.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="final-cta">
+          <span class="section-kicker">Contacto</span>
+          <h2 id="contacto-title">¿Necesitás un electricista confiable en Zona Sur?</h2>
+          <p>Escribile a Lucas Vigolo por WhatsApp. Contale qué falla tenés, dónde estás y si podés adjuntar fotos del tablero o del sector afectado. Cuanto más claro sea el detalle, más rápido se puede orientar el presupuesto.</p>
+
+          <div class="contact-row">
+            <div class="contact-item">
+              <span>WhatsApp</span>
+              <a href="https://wa.me/541123825297?text=Hola%20Lucas%2C%20necesito%20un%20presupuesto%20por%20un%20trabajo%20eléctrico" target="_blank" rel="noopener">+54 11 2382-5297</a>
+            </div>
+            <div class="contact-item">
+              <span>Email</span>
+              <a href="mailto:vigoloelectricidad@gmail.com">vigoloelectricidad@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <span>Zona</span>
+              <strong>Burzaco y Zona Sur</strong>
+            </div>
+          </div>
+
+          <a class="btn btn-primary" href="https://wa.me/541123825297?text=Hola%20Lucas%2C%20necesito%20un%20presupuesto%20por%20un%20trabajo%20eléctrico" target="_blank" rel="noopener">
+            Pedir presupuesto por WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <strong>Vigolo Electricidad</strong> · Lucas Vigolo · Electricista en Zona Sur · vigoloelectricidad@gmail.com
     </div>
-  </section>
-
-  <section id="servicios" class="services">
-    <h2>Servicios eléctricos</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Instalaciones eléctricas</h3>
-        <p>Realizamos instalaciones completas en viviendas, oficinas y locales comerciales. Desde el diseño del circuito hasta la conexión final, cumpliendo las normas AEA.</p>
-      </div>
-      <div class="service-card">
-        <h3>Tableros eléctricos</h3>
-        <p>Armado, reparación y modernización de tableros con protecciones térmicas y diferenciales, garantizando seguridad y estabilidad eléctrica.</p>
-      </div>
-      <div class="service-card">
-        <h3>Luminarias LED</h3>
-        <p>Instalación de luminarias LED, sensores de movimiento y sistemas inteligentes de iluminación para interiores y exteriores.</p>
-      </div>
-      <div class="service-card">
-        <h3>Cableado estructurado</h3>
-        <p>Reinstalación o renovación de cableado interno, canalización en PVC o metálica, y conexionado profesional de líneas de energía y datos.</p>
-      </div>
-      <div class="service-card">
-        <h3>CCTV y seguridad</h3>
-        <p>Instalación de cámaras de seguridad, cableado y puesta en marcha de sistemas DVR con control remoto por celular.</p>
-      </div>
-      <div class="service-card">
-        <h3>Puesta a tierra</h3>
-        <p>Instalación de jabalinas y medición de puesta a tierra con instrumentos certificados, cumpliendo las normas de seguridad eléctrica.</p>
-      </div>
-      <div class="service-card">
-        <h3>Mantenimiento y urgencias</h3>
-        <p>Atención rápida ante fallas eléctricas, cortocircuitos o emergencias las 24hs, con respuesta en Zona Sur y CABA.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="nosotros" class="about">
-    <h2>Sobre nosotros</h2>
-    <p>Detrás de Vigolo Electricidad está <strong>Lucas Vigolo</strong>, electricista matriculado con más de 20 años de experiencia. 
-    Su compromiso, responsabilidad y profesionalismo garantizan un trabajo prolijo, seguro y duradero para cada cliente.</p>
-  </section>
-
-  <section id="contacto" class="contact">
-    <h2>Contacto</h2>
-    <p>¿Necesitás un electricista de confianza? Comunicate con nosotros:</p>
-    <p>📞 <strong>Teléfono / WhatsApp:</strong> <a href="https://wa.me/541123825297" target="_blank">+54 11 2382 5297</a></p>
-    <p>📧 <strong>Email:</strong> <a href="mailto:vigoloelectricidad@gmail.com">vigoloelectricidad@gmail.com</a></p>
-    <p>📍 <strong>Ubicación:</strong> Burzaco, Zona Sur y Capital Federal</p>
-  </section>
-
-  <footer>
-    <p>© 2025 Vigolo Electricidad — Todos los derechos reservados</p>
   </footer>
 
-  <a href="https://wa.me/541123825297" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a class="whatsapp-float" href="https://wa.me/541123825297?text=Hola%20Lucas%2C%20necesito%20un%20presupuesto%20por%20un%20trabajo%20eléctrico" target="_blank" rel="noopener" aria-label="Escribir a Vigolo Electricidad por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M20 11.5a8.2 8.2 0 0 1-12.3 7.1L4 19.7l1.2-3.5A8.2 8.2 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+      <path d="M9.3 8.7c.2 3 2.3 5.2 5.3 5.9" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    </svg>
+    WhatsApp
+  </a>
 
+  <script>
+    (function () {
+      var hero = document.querySelector(".hero");
+      if (!hero || !window.fetch) return;
+
+      fetch("assets/hero-electricista-vigolo.b64", { cache: "force-cache" })
+        .then(function (response) {
+          return response.ok ? response.text() : "";
+        })
+        .then(function (data) {
+          var cleanData = data.replace(/\s/g, "");
+          if (cleanData) {
+            hero.style.setProperty("--hero-image", 'url("data:image/jpeg;base64,' + cleanData + '")');
+          }
+        })
+        .catch(function () {});
+    })();
+  </script>
 </body>
 </html>
